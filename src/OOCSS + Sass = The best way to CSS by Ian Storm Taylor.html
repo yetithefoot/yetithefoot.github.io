@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/ -->
+<html class="js no-flexbox no-touch backgroundsize cssanimations csscolumns cssreflections csstransforms csstransforms3d csstransitions svg inlinesvg cssmask wf-freightsanspro-i4-active wf-freightsanspro-n4-active wf-freightsanspro-n7-active wf-freightsanspro-n6-active wf-freightsanspro-i6-active wf-inconsolata-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>OOCSS + Sass = The best way to CSS by Ian Storm Taylor</title>
+  <meta name="description" content="Design co-founder at Segment.io — #design #frontend #risd #wis">
+  <meta name="author" content="Ian Storm Taylor">
+
+  <link rel="stylesheet" href="http://ianstormtaylor.com/stylesheets/main.css">
+  
+
+  <script type="text/javascript" async="" src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/segment.min.js"></script><script type="text/javascript" async="" src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/mixpanel-2.1.min.js"></script><script type="text/javascript" async="" src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/ga.js"></script><script type="text/javascript" async="" src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/analytics.min.js"></script><script src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/modernizr.min.custom.js"></script>
+  <script src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/zdj4nxm.js"></script>
+  <style type="text/css">.tk-freight-sans-pro{font-family:"freight-sans-pro",sans-serif;}.tk-inconsolata{font-family:"inconsolata",sans-serif;}</style><link rel="stylesheet" href="http://use.typekit.com/c/0cbfd3/freight-sans-pro:n4:i4:n6:i6:n7,inconsolata:n5.TJB:F:2,TJC:F:2,TJG:F:2,TJH:F:2,TJJ:F:2,XH2:F:2/d?3bb2a6e53c9684ffdc9a99f61f5b2a62903f1c1625298e6d593d79460ddba9855746256a1fb5b14c9594c20aa60bfd0dbc3ff515ebf41d10e6283c30e373a9dbb5b37432c02ea722418c7449f6e6731264e1139d63a3e3c1b514dce3b9a5908b2195073fbdcbfdbfa16f064e235a7ca8f56b2651dea6aeed2fd7f931ed985b2ced9c3acc85c01f539b1b1281779320c74cca88d028553525aba7a78a0998d9a105062db162465af9cdba0b9b30e21651bf0e2302305dec78003bd1ddc5870ad6b7ff2b4438a72238777beb0f13a907cdfdb9ac5ac1fe2f54b3df9d4134177d370dbbf980845b534f12031a9e04044cee849147da76055e424c45a7ba69ab8aad4ca61b815aee87ece36db47395d846ada639d2f3bfd2180b81c5df246abe07900fc36ba3ba679be7599b76837b3e53367a"><script>try{Typekit.load();}catch(e){}</script>
+  <script src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/zepto.min.js"></script>
+
+  <script>
+    
+    var analytics=analytics||[];analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net"+"/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);var r=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}},s=["identify","track"];for(var i=0;i<s.length;i++)analytics[s[i]]=r(s[i])},
+    analytics.load("ye39di6");
+    
+  </script>
+
+  <script src="./OOCSS + Sass = The best way to CSS by Ian Storm Taylor_files/main.js"></script>
+<style type="text/css"></style><style type="text/css">#lleo_dialog, #lleo_dialog * {
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+	color: #000 !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 14px !important;
+    left: -999px;
+    top: -999px;
+	/*max-width: 450px !important;*/
+    width: 450px !important;
+
+    display: block !important;
+    z-index: 999999999 !important;
+    opacity: 0 !important;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+	-moz-border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transition: opacity 0.3s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_inner {
+    margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsCopntainer1 {
+	margin: -7px -14px !important;
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsCopntainer2 {
+	padding: 7px 14px !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 17px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 2px !important;
+    top: 2px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    display: block !important;
+    padding: 2px !important;
+	z-index: 9999999999 !important;
+}
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 1px !important;
+    top: 12px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+#lleo_dialog #lleo_optionsBtn img{
+	width: 12px !important;
+	height: 12px !important;
+}
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: -3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+#lleo_dialog #lleo_picOuter {
+    position: relative !important;
+    float: right !important;
+    margin: 3px 3px 3px 8px !important;
+    display: none !important;
+    z-index: 9 !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+#lleo_dialog #lleo_picOuter:hover {
+    z-index: 11 !important;
+}
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+    width: 60px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+#lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+    visibility: visible !important;
+    opacity: 1 !important;
+    -webkit-transition: opacity 0.3s !important;
+    -webkit-transition-delay: 0.3s !important;
+}
+#lleo_dialog #lleo_transcription {
+    color: #486D85 !important;
+    margin: 0 0 4px 17px !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+
+
+
+
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	width: 80% !important;
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    padding: 1px 4px !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+}
+
+#lleo_dialog .ll-translation-item {
+	width: 100% !important;
+	float: left !important; 
+	padding:1px 4px;
+	color: #3F669F !important;
+	padding: 3px !important;
+	border: solid 1px white !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+	margin: 0px 5px 2px 2px !important;
+}
+
+
+
+
+
+#lleo_dialog #lleo_icons {
+    margin: 10px 0 7px !important;
+    color: #aaa !important;
+    line-height: 20px !important;
+    font-size: 11px !important;
+    clear: both !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 0 -2px 3px !important;
+    text-decoration: none !important;
+    background: 0 0 no-repeat !important;
+    opacity: 0.5 !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+
+
+
+#lleo_dialog #lleo_contextContainer {
+    margin: -7px -14px 5px !important;
+    padding: 3px 15px 3px 10px !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    /*padding-right: 52px !important;*/
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    border-top: solid 1px #eee !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+</style><style type="text/css">
+.ll-content-notification *{
+	letter-spacing: normal !important;
+	margin: 0 !important;
+    padding: 0 !important;
+	background: none !important;
+	border: 0 !important;
+	float: none !important;
+	text-align: left !important;
+	text-decoration: none !important;
+    font: normal 15px 'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif !important;
+}
+
+
+.ll-content-notification {
+    vertical-align: baseline !important;
+    color: #000 !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed !important;
+    background: #fff !important;
+    border: solid 1px #AAA !important;
+	/*
+    left: -999px;
+    top: -999px;
+	*/
+    width: auto;
+    /* width: 300px !important; */
+    display: block;
+    z-index: 999999999 !important;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
+    /* opacity: 0 !important; */
+    transition: opacity 0.8s !important;
+    -moz-transition: opacity 0.8s !important; /* Firefox 4 */
+    -webkit-transition: opacity 0.8s !important; /* Safari and Chrome */
+    -o-transition: opacity 0.8s !important; /* Opera */
+    cursor: default !important;
+}
+
+.ll-content-notification-shown {
+    opacity: 1 !important;
+    transition: opacity 0.8s !important;
+    -moz-transition: opacity 0.8s !important; /* Firefox 4 */
+    -webkit-transition: opacity 0.8s !important; /* Safari and Chrome */
+    -o-transition: opacity 0.8s !important; /* Opera */
+}
+
+.ll-content-notification-header {
+	border: 0 !important;
+	margin: 0 !important;
+    background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAABCAIAAABsYngUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAABJJREFUGFdjePHmCxw9e/UZjgAVYhYtk8xZqAAAAABJRU5ErkJggg==) !important;
+    border-bottom: solid 1px #CCC !important;
+    padding: 1px 4px !important;
+	min-height: 18px !important;
+	width: 100% !important;
+	-webkit-border-top-left-radius: 3px !important;
+    -webkit-border-top-right-radius: 3px !important;
+    -moz-border-radius-topleft: 3px !important;
+    -moz-border-radius-topright: 3px !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+	border-collapse: collapse !important;
+	border-spacing: 0 !important;
+}
+
+.ll-content-notification-header-pic {
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 3px 0 0 3px !important;
+	width: 20px !important;
+	vertical-align: top !important;
+	line-height: 1px !important;
+}
+
+.ll-content-notification-header-pic img{
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	line-height: 1px !important;
+}
+
+
+.ll-content-notification-header-caption {
+    font: normal 13px 'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif !important;
+	font-weight: bold !important;
+    line-height: 15px !important;
+    color: #555 !important;
+    float: left !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+	white-space: normal !important;
+	padding: 3px !important;
+	margin: 0 !important;
+}
+
+.ll-content-notification-header-close {
+    width: 15px !important;
+	vertical-align: top !important;
+	text-align: right !important;
+	padding: 6px 5px 0 0 !important;
+	margin: 0 !important;
+	line-height: 1px !important;
+}
+
+.ll-content-notification-header-close img {
+	border: 0 !important;
+    width: 7px !important;
+    height: 7px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+}
+
+.ll-content-notification-content {
+    margin: 0 !important;
+    padding: 8px !important;
+    float: left !important;
+    overflow: hidden !important;
+    width: auto !important;
+}
+
+.ll-content-notification-content-logo {
+    float: left !important;
+}
+
+.ll-content-notification-content-main {
+    margin-left: 60px !important;
+    overflow: hidden !important;
+    padding: 0 0 2px 0 !important;
+    color: #333 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    font: normal 13px 'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif !important;
+    line-height: 15px !important;
+    width: auto !important;
+}
+
+.ll-content-notification-content-header {
+	text-align: left !important;
+	text-decoration: none !important;
+    font: bold 15px 'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif !important;
+    line-height: 19px !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: #333 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.ll-content-notification-word {
+    color: #d56e00 !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+</style></head>
+
+<body>
+  <header class="header">
+  <div class="wrap">
+    <div class="header-avatar"><a class="avatar-link" href="http://ianstormtaylor.com/" style="background-image:url(/images/ian.jpg)"></a></div>
+
+    <hgroup class="header-text">
+      <h2 class="header-name"><a class="home-link" href="http://ianstormtaylor.com/">Ian Storm Taylor</a></h2>
+      <h3 class="header-title">Co-founder @ <a href="http://segment.io/">Segment.io</a></h3>
+    </hgroup>
+
+    <section class="header-social">
+      <ul class="header-social-icons">
+        
+        <li class="dribbble"><a class="dribbble-icon icon ss-social-circle ss-dribbble" href="http://dribbble.com/ianstormtaylor"></a>
+        
+        
+        </li><li class="github"><a class="github-icon icon ss-social-circle ss-octocat" href="http://github.com/ianstormtaylor"></a>
+        
+        
+        </li><li class="twitter"><a class="twitter-icon icon ss-social-circle ss-twitter" href="http://twitter.com/ianstormtaylor"></a>
+        
+        </li><li class="rss"><a class="rss-icon icon ss-social-circle ss-rss" href="http://ianstormtaylor.com/atom.xml"></a>
+      </li></ul>
+      <ul class="header-social-buttons">
+        
+      </ul>
+    </section>
+  </div>
+</header>
+  <nav class="nav">
+  <a class="home icon ss-standard ss-home" href="http://ianstormtaylor.com/" title="Home"></a>
+  
+  <a class="previous" href="http://ianstormtaylor.com/break-apart-your-backbonejs-render-methods" title="Previous post:
+Break Apart Your Backbone.js Render Methods">Break Apart Your Backbone.js Render Methods</a>
+  
+  
+</nav>
+  <section class="main" role="main">
+    <article class="article">
+  <header class="article-header">
+    <h1 class="article-title"><a class="article-link" href="http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css">OOCSS + Sass = The best way to CSS</a></h1>
+    <h2 class="article-byline">By Ian Storm Taylor</h2>
+    <time class="article-date">October 2012</time>
+  </header>
+  <div class="article-body"><p><a href="http://oocss.org/">Object-oriented CSS</a> is awesome. But littering your markup with non-semantic classes is <em>not</em> awesome. Those classes sprinkled all over your HTML <em>are</em> going to change, and that’s not gonna be fun. But if you combine OOCSS and <a href="http://sass-lang.com/">Sass</a> you get the best of both worlds: modular CSS without bloated, hard-to-maintain HTML.</p>
+
+<h2 id="oocss_leads_to_hardtomaintain_html">OOCSS leads to hard-to-maintain HTML.</h2>
+
+<p>First off, quick disclaimer, a bunch of you probably freaked out the second you read “non-semantic”. Here’s the thing, I don’t actually care about them <em>being</em> non-semantic. I care about what that means for upkeep. Non-semantic classes aren’t <em>needed</em> to describe a component, which means they <em>will</em> change.</p>
+
+<p>The only way to make modules in plain CSS is to define non-semantic classes. (<a href="http://www.xanthir.com/blog/b49w0">For now.</a>) Then you apply those classes to all of your HTML elements. That’s the OOCSS way of approaching modules. But it comes with big problems:</p>
+
+<ol>
+<li>
+<p>I don’t want to have to trawl through HTML every time I flip-flop on styling decisions. I work at <a href="https://segment.io/">a startup</a>—things change all the time.</p>
+</li>
+
+<li>
+<p>I don’t even have access to some of the DOM elements I would need to add classes to! If you’re using <a href="http://ianstormtaylor.com/rendering-views-in-backbonejs-isnt-always-simple">Javascript components to render elements on your page</a>, then you can’t add classes to elements inside the component. (Unless you do some janky, unspeakable things.)</p>
+</li>
+</ol>
+
+<p>Besides the unmaintainable HTML, everything else about OOCSS is spot on. Abstracting repetition into modules is the only way to keep CSS maintainable on large projects. So how do we get the benefits without the drawbacks?</p>
+
+<h2 id="oosass_to_the_rescue">OOSass to the rescue!</h2>
+
+<p>Combining OOCSS and Sass gives you super powers. The <code>@extend</code> directive in Sass lets you inherit styles from another selector without duplicating everything like a <code>@mixin</code>. Which is sweet, but even <code>@extend</code> calls can cause code bloat if you nest them or use them with nested selectors.</p>
+
+<p>Luckily <a href="http://chriseppstein.github.com/blog/2012/08/23/sass-3-2-is-released/">Sass 3.2</a> added a feature called <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholders">placeholders</a>. Placeholders are selectors that output nothing unless they are extended. Here’s what a placeholder looks like:</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">separator</span>
+    <span class="na">border-top</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nb">black</span>
+
+<span class="nt">hr</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">separator</span>
+
+<span class="nc">.separator</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">separator</span>
+</code></pre>
+</div>
+<p>That would generate the following CSS:</p>
+<div class="highlight"><pre><code class="css"><span class="nt">hr</span><span class="o">,</span>
+<span class="nc">.separator</span> <span class="p">{</span>
+    <span class="k">border-top</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>Placeholders <strong>don’t have the code bloat</strong> problems that mixins or regular <code>@extend</code> calls have. That makes placeholders perfect for creating non-semantic CSS modules. I call these modules <strong>“patterns”</strong>. They are little bits of style that you can mix and match throughout your stylesheets.</p>
+
+<h2 id="ill_show_you_a_real_use_case">I’ll show you a real use case.</h2>
+
+<p>Take the golden child of OOCSS as an example: the <code>.media</code> module. You probably want to apply the <code>.media</code> module to a bunch of your components: <code>.status</code>, <code>.profile</code>, etc.</p>
+
+<p>Thing is, you don’t want to have to repeat <code>.media</code> all over your HTML. Especially because you’re already going to be repeating <code>.status</code> and <code>.profile</code>. That’s where using placeholders makes things awesomely DRY. Here’s our <code>%media</code> pattern:</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">media</span>
+    <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span>
+    <span class="k">&amp;</span><span class="nd">:first-child</span>
+        <span class="na">float</span><span class="o">:</span> <span class="no">left</span>
+    <span class="k">&amp;</span><span class="nd">:last-child</span>
+        <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span>
+</code></pre>
+</div>
+<p>Now instead of having to repeat <code>.media</code> on all of your elements, you just extend the <code>%media</code> pattern anywhere you want to use it:</p>
+<div class="highlight"><pre><code class="sass"><span class="nc">.status</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">media</span>
+    <span class="c1">// Status-specific styles here...</span>
+
+<span class="nc">.profile</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">media</span>
+    <span class="c1">// Profile-specific styles here...</span>
+</code></pre>
+</div>
+<p>This means that in your HTML you only need to add the semantic classes: <code>.status</code> and <code>.profile</code>—the ones you don’t mind typing because without them all you have is an <code>&lt;article&gt;</code> element.</p>
+
+<p>You also get flexibility. If you decide to change the way statuses look so that the <code>.media</code> module no longer applies, just remove that <code>@extend</code> call and your done! No combing through your HTML to remove <code>.media</code> classes.</p>
+
+<p>Sharp eyes might have noticed that I used a slightly modified version of the <code>.media</code> module. That goes back to not having access to the DOM when using Javascript components…</p>
+
+<h2 id="oosass_makes_styling_javascript_components_easy">OOSass makes styling Javascript components easy.</h2>
+
+<p>The biggest problem I have with OOCSS is it assumes you have complete control over the DOM and can add classes to it. That’s not always true! When you’re rendering Javascript components (or using someone else’s), you can only touch the top-most element of the component.</p>
+
+<p>If you attach a <code>DropdownView</code> to your <code>.user-dropdown</code> element, you could add a <code>.media</code> class to <code>.user-dropdown</code>. But there’s no way to add classes to the dropdown’s <code>.button</code> or any of its <code>.menu-item</code>’s because you have no control over the DOM inside that component.</p>
+
+<p>With Sass placeholders, that’s not a problem:</p>
+<div class="highlight"><pre><code class="sass"><span class="nc">.dropdown</span>
+    <span class="c1">// Normal styles for every dropdown...</span>
+
+<span class="nc">.user-dropdown</span>
+    <span class="c1">// Extra styles for user-specific dropdowns...</span>
+    <span class="nc">.menu-item</span>
+        <span class="k">@extend</span> <span class="err">%</span><span class="nt">media</span>
+</code></pre>
+</div>
+<p>You’d have to do uncouth things to get that to work with pure CSS classes: reaching into components and destroying their encapsulation, or using some sort of horrific string-based className API. But with Sass patterns you can easily augment DOM elements that you have no direct control of.</p>
+
+<h2 id="okay_okay_get_to_the_examples">Okay, okay, get to the examples!</h2>
+
+<p>I love reading through other people’s CSS patterns, so I figured I’d share some of my own. Here are some of the patterns I use all over <a href="https://segment.io/">Segment.io</a>:</p>
+
+<h3 id="lip">Lip</h3>
+
+<p>This is an Apple-style separator, creating a lip above the content underneath it. (Notice I also have <code>%reversed-lip</code> for handling a lip in the opposite direction.)</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">lip</span>
+    <span class="na">clear</span><span class="o">:</span> <span class="no">both</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">block</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
+    <span class="na">background</span><span class="o">:</span> <span class="sx">url('/public/images/patterns/lip/lip.png')</span> <span class="no">no-repeat</span>
+    <span class="na">background-size</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="mi">100</span><span class="kt">%</span>
+
+<span class="err">%</span><span class="nt">reversed-lip</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">lip</span>
+    <span class="na">background-image</span><span class="o">:</span> <span class="sx">url('/public/images/patterns/lip/reversed-lip.png')</span>
+</code></pre>
+</div>
+<h3 id="valley">Valley</h3>
+
+<p>This just adds two <strong>lips</strong> to the top and bottom of an element to make it feel like it is recessed into the area around it.</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">valley</span>
+    <span class="na">position</span><span class="o">:</span> <span class="no">relative</span>
+    <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span>
+
+    <span class="na">&amp;</span><span class="o">::</span><span class="n">before</span><span class="o">,</span>
+    <span class="na">&amp;</span><span class="o">::</span><span class="n">after</span>
+        <span class="na">content</span><span class="o">:</span> <span class="s1">'</span><span class="s2">'</span>
+        <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+        <span class="na">left</span><span class="o">:</span> <span class="mi">0</span>
+        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="na">&amp;</span><span class="o">::</span><span class="n">before</span>
+        <span class="k">@extend</span> <span class="err">%</span><span class="nt">lip</span>
+        <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="na">&amp;</span><span class="o">::</span><span class="n">after</span>
+        <span class="k">@extend</span> <span class="err">%</span><span class="nt">reversed-lip</span>
+        <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
+</code></pre>
+</div>
+<h3 id="plane">Plane</h3>
+
+<p>A very simple, rounded-corner box. These are the backbone for all of the colored planes on Segment.io</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">plane</span>
+    <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.1</span><span class="p">)</span>
+    <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$border-radius-medium</span>
+
+<span class="err">%</span><span class="nt">white-plane</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">plane</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$white</span>
+
+<span class="err">%</span><span class="nt">off-white-plane</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">plane</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$off-white</span>
+
+<span class="nc">...</span>
+</code></pre>
+</div>
+<h3 id="seam">Seam</h3>
+
+<p>You know those borders people make by putting a black line and a white line together and making them translucent? I call that a <strong>seam</strong>.</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">seam</span>
+    <span class="na">clear</span><span class="o">:</span> <span class="no">both</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">block</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span>
+    <span class="na">border-top</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.12</span><span class="p">)</span>
+    <span class="na">border-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$white</span><span class="o">,</span> <span class="mf">.15</span><span class="p">)</span>
+</code></pre>
+</div>
+<h3 id="well">Well</h3>
+
+<p>Similar to a <strong>valley</strong>, this is just a depression in the page, for things like <code>&lt;code&gt;</code> samples. (It’s actually really similar to the code samples on this blog.)</p>
+<div class="highlight"><pre><code class="sass"><span class="err">%</span><span class="nt">well</span>
+    <span class="na">box-shadow</span><span class="o">:</span> <span class="no">inset</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.14</span><span class="p">)</span>
+    <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$border-radius-medium</span>
+
+<span class="err">%</span><span class="nt">off-white-well</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">well</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$off-white</span>
+
+<span class="err">%</span><span class="nt">light-gray-well</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">well</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$light-gray</span>
+
+<span class="nc">...</span>
+</code></pre>
+</div>
+<h2 id="now_its_your_turn">Now it’s your turn.</h2>
+
+<p>Hopefully that gives you a good idea what <strong>patterns</strong> can be and how to use them in your CSS components. They’re everywhere.</p>
+
+<p>They should <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">only do one thing</a>, and they should do it well. Harry Roberts <a href="http://www.youtube.com/watch?v=R-BX4N8egEc&hd=1">mentions</a> that you should keep their names vague and non-semantic. That forces you to make them abstract so that you can use them all over the place. And you can always build patterns on top of each other, like I’ve done in the <strong>valley</strong> example.</p>
+
+<p>If you have similar patterns of your own, I’d love to see ‘em!</p></div>
+  <footer class="article-footer">
+    <p class="text-shares">
+      Have anything to add? <a class="twitter-share-link" href="http://twitter.com/ianstormtaylor">Tweet</a> at me or reply on <a class="hn-share-link" href="http://news.ycombinator.com/item?id=4661436">Hacker News</a>.
+    </p>
+    <ul class="social-shares">
+      
+      
+    </ul>
+  </footer>
+</article>
+
+
+
+
+
+
+
+
+  </section>
+
+</body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></html>
